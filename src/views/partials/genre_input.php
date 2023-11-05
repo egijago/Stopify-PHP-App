@@ -17,7 +17,7 @@ function genreInput($params=null)
             <div class="dialog" id="dialog-genre" id-genre="$id">
                 <div class="genre-card" id="genre-card-preview" style="background-color:$color;">
                 <p id="genre-name-preview">$genre_name</p>
-                <img id="genre-image-preview" src="$image_url"  alt="/image/none.jpg"/><br>
+                <img id="genre-image-preview" src="$image_url"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
                 </div>
                 <label for="genre-name">Genre name</label><br>
                 <input type="text" id="genre-name" value="$genre_name"><br>
@@ -42,7 +42,7 @@ function genreInput($params=null)
             <div class="dialog" id="dialog-genre">
                 <div class="genre-card" id="genre-card-preview">
                 <p id="genre-name-preview"></p>
-                <img id="genre-image-preview"  alt="/image/none.jpg"/><br>
+                <img id="genre-image-preview"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
                 </div>
                 <label for="genre-name">Genre name</label><br>
                 <input type="text" id="genre-name"><br>

@@ -43,7 +43,7 @@ function albumDisplay($id_album, $album_image, $album_title, $artist){
     $html=<<<"EOT"
         <div class="song-item-medium" value="$id_album">
             <a href="album?id=$id_album">
-                <img class="container-pagination" src="$album_image"  alt="/image/none.jpg""/>
+                <img class="container-pagination" src="$album_image"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/>
                 <h3>$album_title</h3>
                 <p>$artist</p>
             </a>

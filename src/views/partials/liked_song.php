@@ -24,13 +24,13 @@ function likedSong($params)
     $total_pages = ceil($total_records / $limit);
 
     $html = icon($_SESSION["username"]);
-    $liked = '<div class="liked-detail">
-                    <img src="assets/icon_pagination/Rectangle 99.png"  alt="/image/none.jpg">
+    $liked = `<div class="liked-detail">
+                    <img src="assets/icon_pagination/Rectangle 99.png"  alt="Not Found!" onerror="this.src='/image/none.jpg'">
                     <div class="liked-detail-text">
                         <h1>PLAYLIST</h1>
                         <h2>Liked Songs</h1>
                     </div>
-                </div>';
+                </div>`;
     $html .= $liked;
     $html .= limit_page($limit);
 

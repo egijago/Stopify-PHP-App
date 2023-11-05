@@ -59,7 +59,7 @@ function musicInput($params)
         $html = <<< "EOT"
         <div class="dialog-wrapper" >
             <div class="dialog" id="dialog-music" id-music="$id">
-                <img id="album-image-preview" src="$default_image_url"  alt="/image/none.jpg"/><br>
+                <img id="album-image-preview" src="$default_image_url"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
                 <label for="music-title">Music title</label><br>
                 <input type="text" id="music-title" value="$title"><br>
                 <label for="song">Audio file</label><br>
@@ -113,7 +113,7 @@ function musicInput($params)
         $html = <<< "EOT"
         <div class="dialog-wrapper" >
             <div class="dialog" id="dialog-music">
-                <img id="album-image-preview"  alt="/image/none.jpg"/><br>
+                <img id="album-image-preview"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
                 <label for="music-title">Music title</label><br>
                 <input type="text" id="music-title"><br>
                 <label for="song">Audio file</label><br>

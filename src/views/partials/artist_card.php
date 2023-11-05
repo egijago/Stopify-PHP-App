@@ -12,7 +12,7 @@ function artistCard ($id)
     $html = <<< "EOT"
     <div class="artist-card" value="$value">
         <div class="img-container">
-            <img src="$image_url"  alt="/image/none.jpg">
+            <img src="$image_url"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/>
         </div>
         <p class="artist-name">$artist_name</p>
         <p class="card-type">Artist</p>

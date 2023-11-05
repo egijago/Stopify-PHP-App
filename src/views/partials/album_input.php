@@ -26,7 +26,7 @@ function albumInput($params)
         $html = <<< "EOT"
         <div class="dialog-wrapper" >
             <div class="dialog" id="dialog-album" id-album="$id">
-            <img id="album-image-preview" src="$image_url"  alt="/image/none.jpg"/><br>
+            <img id="album-image-preview" src="$image_url"  alt="Not Found!" onerror="this.src='/image/none.jpg'"><br>
             <label for="album-title">Album title</label><br>
             <input type="text" value='$album_title' id="album-title"><br>
             <label for="image">Album cover</label><br>
@@ -60,7 +60,7 @@ function albumInput($params)
         $html = <<< "EOT"
         <div class="dialog-wrapper" >
             <div class="dialog" id="dialog-album">
-                <img id="album-image-preview"  alt="/image/none.jpg"/><br>
+                <img id="album-image-preview"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
                 <label for="album-title">Album title</label><br>
                 <input type="text" id="album-title"><br>
                 <label for="image">Album cover</label><br>

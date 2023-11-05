@@ -13,7 +13,7 @@ function artistInput($params)
         $html = <<< "EOT"
         <div class="dialog-wrapper" >
             <div class="dialog" id="dialog-artist" id-artist="$id">
-            <img id="artist-image-preview" src="$image_url"  alt="/image/none.jpg"/><br>
+            <img id="artist-image-preview" src="$image_url"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
             <label for="artist-name">Artist name</label><br>
             <input type="text" id="artist-name" value="$name"><br>
             <label for="image">Artist picture</label><br>
@@ -33,7 +33,7 @@ function artistInput($params)
         $html = <<< "EOT"
         <div class="dialog-wrapper" >
             <div class="dialog" id="dialog-artist">
-            <img id="artist-image-preview"  alt="/image/none.jpg"/><br>
+            <img id="artist-image-preview"  alt="Not Found!" onerror="this.src='/image/none.jpg'"/><br>
             <label for="artist-name">Artist name</label><br>
             <input type="text" id="artist-name"><br>
             <label for="image">Artist picture</label><br>
