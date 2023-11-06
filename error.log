@@ -1,0 +1,9 @@
+[06-Nov-2023 14:12:23 UTC] PHP Warning:  require_once(/var/www/html/inc/..dotenv.php): failed to open stream: No such file or directory in /var/www/html/inc/bootstrap.php on line 8
+[06-Nov-2023 14:12:23 UTC] PHP Fatal error:  require_once(): Failed opening required '/var/www/html/inc/..dotenv.php' (include_path='.:/usr/local/lib/php') in /var/www/html/inc/bootstrap.php on line 8
+[06-Nov-2023 14:16:06 UTC] PHP Parse error:  syntax error, unexpected 'cons' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) in /var/www/html/src/controllers/BaseController.class.php on line 6
+[06-Nov-2023 14:28:40 UTC] PHP Notice:  Trying to get property 'image_url' of non-object in /var/www/html/src/views/partials/music.php on line 21
+[06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'album_title' of non-object in /var/www/html/src/views/partials/music.php on line 21
+[06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'music_title' of non-object in /var/www/html/src/views/partials/music.php on line 21
+[06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'genre_name' of non-object in /var/www/html/src/views/partials/music.php on line 21
+[06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'artist_name' of non-object in /var/www/html/src/views/partials/music.php on line 21
+[06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'audio_url' of non-object in /var/www/html/src/views/partials/music.php on line 22

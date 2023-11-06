@@ -35,9 +35,10 @@ def insert_fake_users(num_users):
 def insert_fake_artists(num_artists):
     folder_path = os.getcwd() + '/../public/storage/artist_image/'
     artist_images = os.listdir(folder_path)
+    count_images = len(artist_images)
     for i in range(num_artists):
         name = fake.name()
-        image_url = "/storage/artist_image/" + artist_images[i]
+        image_url = "/storage/artist_image/" + artist_images[i % count_images]
         cur.execute(
             "INSERT INTO artist (name, image_url) VALUES (%s, %s)",
             (name, image_url)
@@ -47,9 +48,10 @@ def insert_fake_artists(num_artists):
 def insert_fake_genres(num_genres):
     folder_path = os.getcwd() + '/../public/storage/genre_image/'
     genre_images = os.listdir(folder_path)
+    count_images = len(genre_images)
     for i in range(len(genre_images)):
         name = genre_images[i][:-4]
-        image_url = "/storage/genre_image/" +genre_images[i]
+        image_url = "/storage/genre_image/" +genre_images[i%count_images]
         color = fake.hex_color()
         cur.execute(
             "INSERT INTO genre (name, image_url, color) VALUES (%s, %s, %s)",
@@ -64,11 +66,12 @@ def insert_fake_albums(num_albums):
     
     folder_path = os.getcwd() + '/../public/storage/album_image/'
     album_images = os.listdir(folder_path)
+    count_images = len(album_images)
     
     for i in range(num_albums):
         title = fake.sentence()
         id_artist = random.choice(ids)
-        image_url = "/storage/album_image/" +  album_images[i]
+        image_url = "/storage/album_image/" +  album_images[i%count_images]
         cur.execute(
             "INSERT INTO album (title, id_artist, image_url) VALUES (%s, %s, %s)",
             (title, id_artist, image_url)
@@ -86,11 +89,11 @@ def insert_fake_music(num_music):
         
     folder_path = os.getcwd() + '/../public/storage/music_audio/'
     music_audios = os.listdir(folder_path)
-    
-    for i in range(min(num_music, len(music_audios))):
+    count_audios = len(music_audios)
+    for i in range(num_music):
         title = fake.sentence()
         id_genre = random.choice(id_genres)
-        audio_url = "/storage/music_audio/" + music_audios[i]
+        audio_url = "/storage/music_audio/" + music_audios[i%count_audios]
         release_date = fake.date_time()
         id_album = random.choice(id_albums)
         cur.execute(
@@ -125,19 +128,19 @@ def reset():
     cur.execute("DELETE FROM likes CASCADE")
 
 
-reset()
+# reset()
 
 num_fake_users = 100
 num_fake_genres = 20
-num_fake_artists = 20
-num_fake_albums = 100
-num_fake_music = 1000
-num_fake_likes = 1000
+num_fake_artists = 10000
+num_fake_albums = 10000
+num_fake_music = 100000
+num_fake_likes = 100000
 
-insert_fake_users(num_fake_users)
-insert_fake_genres(num_fake_genres)
-insert_fake_artists(num_fake_artists)
-insert_fake_albums(num_fake_albums)
+# insert_fake_users(num_fake_users)
+# insert_fake_genres(num_fake_genres)
+# insert_fake_artists(num_fake_artists)
+# insert_fake_albums(num_fake_albums)
 insert_fake_music(num_fake_music)
 insert_fake_likes(num_fake_likes)
 

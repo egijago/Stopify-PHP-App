@@ -85,6 +85,7 @@ class APIRouter
         catch (Exception $e)
         {
             BaseController::toResponse(500,"Something went wrong!", "", false);
+            error_log("foobar");
         }
 
         // /*DEBUG*/

@@ -1,5 +1,3 @@
-
-
 <?php
 function AlbumContainer($img_url, $album_title, $artist) {
     $html = <<<"EOT"

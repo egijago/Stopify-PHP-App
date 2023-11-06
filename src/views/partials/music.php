@@ -28,19 +28,19 @@ function songDetail($img_url, $album, $title, $genre, $artist, $liked)
 {
     $likedStatus = $liked ? "Unlike" : 'Like';
 
-    $html = `
+    $html = "
         <div class='play-song-container'>
-            <img src='$img_url'  alt="Not Found!" onerror="this.src='/image/none.jpg'">
+            <img src='$img_url'  alt='Not Found!' onerror='this.src=\"/image/none.jpg\"'>
             <div class='play-song-detail'>
                 <h3>$album</h3>
                 <h4>$title</h4>
                 <br>
                 <p>$genre</p>
                 <p>$artist</p>
-                <button class='love-button' id='likeButton' onclick='handleLoveButtonClick()' >$likedStatus ❤️</button>
+                <button class='love-button' id='likeButton' onclick='handleLoveButtonClick()'>$likedStatus ❤️</button>
             </div>
         </div>
-    `;
+    ";
 
     return $html;
 }
@@ -48,13 +48,12 @@ function songDetail($img_url, $album, $title, $genre, $artist, $liked)
 function songPlayer($audio_url)
 {   
     $ext = pathinfo($audio_url, PATHINFO_EXTENSION);
-    $html = <<< "EOT"
+    $html = <<<EOT
         <div class='audio-player'>
             <audio controls>
                 <source src="$audio_url" type="audio/$ext">
             </audio>
         </div>
-    ";
     EOT;
     return $html;
 }
