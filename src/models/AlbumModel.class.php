@@ -38,6 +38,22 @@ class AlbumModel extends BaseModel
         return $this->db->single();
     }
 
+    public function getAlbumbyMusicId($id_music)
+    {
+        $this->db->query(
+        'SELECT 
+            album.id_album as id_album,
+            album.title as album_title,
+            album.image_url as album_image_url
+        FROM
+            album
+        INNER JOIN music ON album.id_album = music.id_album
+        WHERE music.id_music = :id_music
+        ');
+        $this->db->bind(':id_music', $id_music);
+        return $this->db->single();
+    }
+
     public function getAlbumRecords($current_page,$limit)
     {
         $offset = ($current_page - 1) * $limit;

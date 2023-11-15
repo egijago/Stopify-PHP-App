@@ -1,6 +1,7 @@
 <?php
 require_once(PROJECT_ROOT_PATH . "/src/models/MusicModel.class.php");
 require_once(PROJECT_ROOT_PATH . "/src/models/LikesModel.class.php");
+require_once(PROJECT_ROOT_PATH . "/src/models/Subscription.class.php");
 require_once(PROJECT_ROOT_PATH . "/src/views/partials/pagination_item.php");
 require_once(PROJECT_ROOT_PATH . "/src/views/partials/icon.php");
 require_once(PROJECT_ROOT_PATH . "/src/views/partials/limit_page.php");
@@ -10,7 +11,7 @@ function musicDetail($params)
     $music_id = $params["music_id"];
 
     $albumModel = new MusicModel();
-    $total_recordsdata = $albumModel->getDetailMusic($music_id);
+    $musicDetail = $albumModel->getDetailMusic($music_id);
 
     $likesModel = new LikesModel();
     $liked = $likesModel->checkLikes($_SESSION["id_user"], $music_id) ? true : false;
@@ -18,10 +19,38 @@ function musicDetail($params)
     $html = icon($_SESSION["username"]);
     $html .= ' <input type="hidden" id="id_user" name="id_user" value="'.$_SESSION["id_user"].'">';
     $html .= '<h1 style="margin-top: 5vw;">Good morning, ' . $_SESSION["username"] . '</h1>';
-    $html .= songDetail($total_recordsdata->image_url, $total_recordsdata->album_title, $total_recordsdata->music_title, $total_recordsdata->genre_name, $total_recordsdata->artist_name, $liked);
-    $html .= songPlayer($total_recordsdata->audio_url);
+    $html .= songDetail($musicDetail->image_url, $musicDetail->album_title, $musicDetail->music_title, $musicDetail->genre_name, $musicDetail->artist_name, $liked);
+    $html .= songPlayer($musicDetail->audio_url);
 
-    echo $html;
+    if($musicDetail->premium == '1'){
+        $subscriptionModel = new SubscriptionModel();
+        $subscription = $subscriptionModel->getSubscriptionbyIdUserAndIdArtist($_SESSION["id_user"], $musicDetail->id_artist);
+        if(!$subscription){
+            $htmlSubscription = ' <input type="hidden" id="id_user" name="id_user" value="'.$_SESSION["id_user"].'">';
+            $htmlSubscription .= "
+                <div class='subscription-container'>
+                    <h3>Subscribe to this artist to listen to this song</h3>
+                    <button class='subscription-button' id='subscribeButton' onclick='handleSubscribe()'>Subscribe</button>
+                </div>
+            ";
+            echo $htmlSubscription;
+            return;
+        }
+        if($subscription->status == 'CONFIRM'){
+            echo $html;
+            return;
+        }
+        else if($subscription->status == 'REJECT'){
+            echo '<p> you cant subscrib this artist<p/>';
+        }
+        else
+        {
+            echo '<p> wait to confirm<p/>';
+        }
+    }
+    else{
+        echo $html;
+    }
 }
 
 function songDetail($img_url, $album, $title, $genre, $artist, $liked)

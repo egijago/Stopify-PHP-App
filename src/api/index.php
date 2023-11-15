@@ -7,9 +7,9 @@ require_once PROJECT_ROOT_PATH . '/src/controllers/GenreController.class.php';
 require_once PROJECT_ROOT_PATH . '/src/controllers/LikesController.class.php';
 require_once PROJECT_ROOT_PATH . '/src/controllers/MusicController.class.php';
 require_once PROJECT_ROOT_PATH . '/src/controllers/UsersController.class.php';
+require_once PROJECT_ROOT_PATH . '/src/controllers/PaymentController.class.php';
 
 require_once PROJECT_ROOT_PATH . '/src/middlewares/Utils.class.php';
-
 
 $router = new APIRouter();
 
@@ -65,8 +65,14 @@ $router->get('/api/users', UsersController::class . '::getAllUser');
 $router->post('/api/register', UsersController::class . '::insertUser');
 $router->delete('/api/users/{id_user}', UsersController::class . '::deleteUser');
 
-/* Other API  */
 
+/* Payment Detail API*/
+$router->get('/api/payment/{id_user}',PaymentController::class . '::getDetailPaymentbyId');
+$router->post('/api/payment',PaymentController::class . '::insertDetailPayment');
+
+
+/* Other API  */
+$router->post('/api/updateprofile', UsersController::class . '::updateProfile');
 
 
 

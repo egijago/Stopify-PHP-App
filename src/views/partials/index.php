@@ -28,5 +28,6 @@ $router->get('/element/album-input', 'albumInput');
 $router->get('/element/album-input/{id_album}', 'albumInput');
 $router->get('/element/artist-input', 'artistInput');
 $router->get('/element/artist-input/{id_artist}', 'artistInput');
+$router->get('/element/subscribe/{id_artist}', 'subscribeDialog');
 
 $router->run();

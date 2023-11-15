@@ -6,9 +6,9 @@ import os
 
 conn = psycopg2.connect(
     host="localhost",
-    database="stopify",
+    database="stopify4",
     user="postgres",
-    password="root"
+    password="user"
 )
 
 cur = conn.cursor()
@@ -39,9 +39,10 @@ def insert_fake_artists(num_artists):
     for i in range(num_artists):
         name = fake.name()
         image_url = "/storage/artist_image/" + artist_images[i % count_images]
+        role = random.choice(["FALSE", "TRUE"])
         cur.execute(
-            "INSERT INTO artist (name, image_url) VALUES (%s, %s)",
-            (name, image_url)
+            "INSERT INTO artist (name, image_url,premium) VALUES (%s, %s, %s)",
+            (name, image_url,role)
         )
 
 
@@ -96,9 +97,10 @@ def insert_fake_music(num_music):
         audio_url = "/storage/music_audio/" + music_audios[i%count_audios]
         release_date = fake.date_time()
         id_album = random.choice(id_albums)
+        premium = random.choice(["TRUE", "FALSE"])
         cur.execute(
-            "INSERT INTO music (title, id_genre, audio_url, id_album, release_date) VALUES (%s, %s, %s, %s, %s)",
-            (title, id_genre, audio_url, id_album, release_date)
+            "INSERT INTO music (title, id_genre, audio_url, id_album, release_date, premium) VALUES (%s, %s, %s, %s, %s, %s)",
+            (title, id_genre, audio_url, id_album, release_date, premium)
         )
 
 
@@ -117,7 +119,36 @@ def insert_fake_likes(num_likes):
             "INSERT INTO likes (id_user, id_music) VALUES (%s, %s)",
             (id_user, id_music)
         )
-        
+
+def insert_fake_subscription(num_subscription):
+    cur = conn.cursor()
+    query1 = "SELECT id_user from users;"
+    query2 = "SELECT id_artist from artist;"
+    cur.execute(query1)
+    id_users = cur.fetchall()
+    cur.execute(query2)
+    id_artists = cur.fetchall()
+    for _ in range(num_subscription):
+        id_user = random.choice(id_users)
+        id_artist = random.choice(id_artists)
+        cur.execute(
+            "INSERT INTO subscription (id_artist,id_user) VALUES (%s, %s)",
+            (id_artist,id_user)
+        )
+
+def insert_fake_payment(num_payment):
+    cur = conn.cursor()
+    query1 = "SELECT id_user from users;"
+    cur.execute(query1)
+    id_users = cur.fetchall()
+    # print(id_users[0][0])
+    for _ in id_users:
+        cur.execute(
+            "INSERT INTO paymentinfo (id_user,card_number,card_owner,card_exp_month,card_exp_year) VALUES (%s,%s,%s,%s,%s)",
+            (_[0],1,2,3,4)
+        )
+        print(_[0])
+
 def reset(): 
     cur = conn.cursor()
     cur.execute("DELETE FROM users CASCADE")
@@ -141,9 +172,10 @@ num_fake_likes = 100000
 # insert_fake_genres(num_fake_genres)
 # insert_fake_artists(num_fake_artists)
 # insert_fake_albums(num_fake_albums)
-insert_fake_music(num_fake_music)
-insert_fake_likes(num_fake_likes)
-
+# insert_fake_music(num_fake_music)
+# insert_fake_likes(num_fake_likes)
+# insert_fake_subscription(10000)
+insert_fake_payment(10000)
 
 
 conn.commit()

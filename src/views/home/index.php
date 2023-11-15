@@ -28,14 +28,6 @@ require_once(PROJECT_ROOT_PATH . "/src/views/partials/font.php");
             <h1 style="margin-top: 5vw;">Good morning, <?php echo $_SESSION["username"] ?></h1>
             <br>
             <div class="fyp" id="fyp"></div>
-            <!-- <h1>Recommended for you</h1>
-            <div class="recommended-container">
-                    <div class="top-song-first">
-                    </div>
-                <div class="top-song-second"></div>
-            </div>
-            <h3>New Release Song</h3>
-            <div class="new-song"></div> -->
         </div>
     </div>
 </body>

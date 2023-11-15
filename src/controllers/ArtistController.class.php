@@ -38,7 +38,7 @@ class ArtistController extends BaseController
         $body_params = self::getBodyParams();
         $params = array_merge($body_params, $path_params);
 
-        $result = self::getInstance()->model->insertArtist($params["artist_name"], $params["image"]);
+        $result = self::getInstance()->model->insertArtist($params["artist_name"], $params["image"], $params["premium"]);
         self::toResponse(200, "Artist added successfully!", $result);
     }
   

@@ -264,6 +264,26 @@ a, a:visited, a:active {
     margin: 5% 5% 5% 5%;
 }
 
+.artist-card .premium-artist{
+    right: 0;
+}
+
+.premium-artist{
+    background-image: url("../assets/logo/premium.png");
+    background-color: rgb(57, 49, 49);
+    border-radius: 20%;
+    position: absolute;
+    background-size: cover;
+    right: left;
+    bottom: 0;
+    width: 20%;
+    aspect-ratio: 1/1;
+    z-index: 3;
+
+    margin: 5% 5% 5% 5%;
+
+}
+
 
 .artist-card .img-container {
     width: 75%;

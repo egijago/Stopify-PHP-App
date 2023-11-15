@@ -1,5 +1,6 @@
 <?php
 require_once(PROJECT_ROOT_PATH ."/src/models/BaseModel.class.php");
+require_once(PROJECT_ROOT_PATH ."/src/clients/RestClient.class.php");
 
 class LikesModel extends BaseModel
 {
@@ -14,7 +15,14 @@ class LikesModel extends BaseModel
         $this->db->query('INSERT INTO ' . $this->table . ' (id_user, id_music) VALUES (:id_user, :id_music)');
         $this->db->bind('id_user', $id_user);
         $this->db->bind('id_music', $id_music);
-        return $this->db->execute();
+
+        $music = new MusicModel();
+        $detail = $music->getDetailMusic($id_music);
+
+        $httpCaller = new BinotifyRestClient();
+
+        $response=$httpCaller->likeSongPremium($id_user,$detail->id_artist,$id_music,$detail->id_album);
+        return $response;
     }
 
     public function checkLikes($id_user, $id_music)
@@ -22,6 +30,7 @@ class LikesModel extends BaseModel
         $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id_user = :id_user AND id_music = :id_music');
         $this->db->bind('id_user', $id_user);
         $this->db->bind('id_music', $id_music);
+
         return $this->db->resultSet();
     }
     

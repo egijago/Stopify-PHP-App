@@ -44,7 +44,7 @@ class ArtistModel extends BaseModel
 		return $this->db->single();
     }
     
-    public function editArtist($id_artist, $name, $image)
+    public function editArtist($id_artist, $name, $image,$premium)
     {
         if (!$image)
         {
@@ -56,15 +56,16 @@ class ArtistModel extends BaseModel
 		$image_url = $upload_path;
 		self::uploadFile($upload_path, $image);
 
-		$this->db->query('UPDATE ' . $this->table . ' SET name = :name, image_url = :image_url WHERE id_artist = :id_artist');
+		$this->db->query('UPDATE ' . $this->table . ' SET name = :name, image_url = :image_url, premium = :premium WHERE id_artist = :id_artist');
 		$this->db->bind('id_artist', $id_artist);
 		$this->db->bind('name', $name);
 		$this->db->bind('image_url', $image_url);
+        $this->db->bind('premium', $premium);
 		$this->db->execute();
 		return $this->db->rowCount();
     }
   
-    public function insertArtist($name, $image) 
+    public function insertArtist($name, $image,$premium) 
     {
         if (!$image)
         {
@@ -77,9 +78,10 @@ class ArtistModel extends BaseModel
 		$image_url = $upload_path;
 		self::uploadFile($upload_path, $image);
 
-		$this->db->query('INSERT INTO ' . $this->table . ' (name, image_url) VALUES (:name, :image_url)');
+		$this->db->query('INSERT INTO ' . $this->table . ' (name, image_url,premium) VALUES (:name, :image_url,:premium)');
 		$this->db->bind('name', $name);
 		$this->db->bind('image_url', $image_url);
+        $this->db->bind('premium', $premium);
 		$this->db->execute();
 		return $this->db->rowCount();
     }

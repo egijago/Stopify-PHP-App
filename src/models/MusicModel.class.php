@@ -89,10 +89,14 @@ class MusicModel extends BaseModel
 			'SELECT 
 				album.image_url AS image_url,
 				album.title AS album_title,
+				album.id_album AS id_album,
 				music.title AS music_title,
 				genre.name AS genre_name,
 				artist.name AS artist_name,
-				music.audio_url AS audio_url
+				artist.id_artist AS id_artist,
+				artist.id_artist AS id_artist,
+				music.audio_url AS audio_url,
+				music.premium AS premium
 			FROM 
 				music
 			JOIN 

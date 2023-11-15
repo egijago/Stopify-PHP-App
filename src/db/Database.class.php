@@ -11,10 +11,10 @@ class Database{
     private $error;
 
     public function __construct(){
-        $this->host = $_ENV["DB_HOST"];
-        $this->user = $_ENV["DB_USER"];
-        $this->pass = $_ENV["DB_PASSWORD"];
-        $this->name = $_ENV["DB_NAME"];
+        $this->host = "localhost";
+        $this->user = "postgres";
+        $this->pass = "user";
+        $this->name = "stopify4";
         $dsn = "pgsql:host=" . $this->host . ";dbname=" . $this->name;
         $options = array(
             PDO::ATTR_PERSISTENT => true,

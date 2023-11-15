@@ -7,3 +7,283 @@
 [06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'genre_name' of non-object in /var/www/html/src/views/partials/music.php on line 21
 [06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'artist_name' of non-object in /var/www/html/src/views/partials/music.php on line 21
 [06-Nov-2023 14:28:41 UTC] PHP Notice:  Trying to get property 'audio_url' of non-object in /var/www/html/src/views/partials/music.php on line 22
+[13-Nov-2023 11:59:49 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(52): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(54): UsersModel->insertUser('asu@asu.com', 'asuu', 'asu')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::insertUser(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 11:59:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(52): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(54): UsersModel->insertUser('asu@asu.com', 'asuu', 'asu')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::insertUser(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 12:01:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(14): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(16): UsersModel->login('admin@admin.com', 'admin')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::login(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 12:01:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(14): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(16): UsersModel->login('admin@admin.com', 'admin')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::login(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 12:01:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(14): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(16): UsersModel->login('admin@admin.com', 'admin')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::login(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 12:01:55 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(52): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(54): UsersModel->insertUser('asu@asu.com', 'asuu', 'asu')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::insertUser(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 12:01:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(52): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(54): UsersModel->insertUser('asu@asu.com', 'asuu', 'asu')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::insertUser(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[13-Nov-2023 12:09:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php:31
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php(14): Database->query('SELECT * FROM u...')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php(16): UsersModel->login('a@a.com', 'a')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): UsersController::login(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 31
+[14-Nov-2023 05:31:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\BaseModel.class.php:16
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\ArtistModel.class.php(77): BaseModel::getExt('vierigans')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\ArtistController.class.php(41): ArtistModel->insertArtist('123@123.com', 'vierigans', 'f')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): ArtistController::insertArtist(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\BaseModel.class.php on line 16
+[14-Nov-2023 05:33:48 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\BaseModel.class.php:16
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\ArtistModel.class.php(77): BaseModel::getExt('vierigans')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\ArtistController.class.php(41): ArtistModel->insertArtist('123@123.com', 'vierigans', 'true')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): ArtistController::insertArtist(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\BaseModel.class.php on line 16
+[14-Nov-2023 05:34:16 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\BaseModel.class.php:16
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\ArtistModel.class.php(77): BaseModel::getExt('1')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\ArtistController.class.php(41): ArtistModel->insertArtist('aisi', '1', 'true')
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): ArtistController::insertArtist(Array)
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(73): APIRouter->run()
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#5 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#6 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\BaseModel.class.php on line 16
+[14-Nov-2023 05:36:25 Europe/Berlin] PHP Warning:  Undefined array key "email" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php on line 54
+[14-Nov-2023 05:36:25 Europe/Berlin] PHP Warning:  Undefined array key "username" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php on line 54
+[14-Nov-2023 05:36:25 Europe/Berlin] PHP Warning:  Undefined array key "password" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\UsersController.class.php on line 54
+[14-Nov-2023 05:36:25 Europe/Berlin] PHP Deprecated:  password_hash(): Passing null to parameter #1 ($password) of type string is deprecated in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\UsersModel.class.php on line 64
+[14-Nov-2023 05:36:25 Europe/Berlin] foobar
+[14-Nov-2023 06:11:46 Europe/Berlin] foobar
+[14-Nov-2023 10:49:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "SubscriptionModel" not found in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php:25
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): musicDetail(Array)
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\index.php(32): APIRouter->run()
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(58): require_once('D:\\Kuliah\\Semes...')
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#4 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 25
+[14-Nov-2023 10:49:51 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_artist in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 27
+[14-Nov-2023 10:58:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php:30
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): musicDetail(Array)
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\index.php(32): APIRouter->run()
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(58): require_once('D:\\Kuliah\\Semes...')
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#4 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 30
+[14-Nov-2023 10:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class stdClass could not be converted to string in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php:30
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): musicDetail(Array)
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\index.php(32): APIRouter->run()
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(58): require_once('D:\\Kuliah\\Semes...')
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#4 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 30
+[14-Nov-2023 11:00:38 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 28
+[14-Nov-2023 11:00:38 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 32
+[14-Nov-2023 11:14:19 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 29
+[14-Nov-2023 11:14:19 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 33
+[14-Nov-2023 11:14:26 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 29
+[14-Nov-2023 11:14:26 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 33
+[14-Nov-2023 11:14:38 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 29
+[14-Nov-2023 11:14:38 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 33
+[14-Nov-2023 13:29:13 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:29:13 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:29:13 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:29:13 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:29:13 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 49
+[14-Nov-2023 13:29:13 Europe/Berlin] foobar
+[14-Nov-2023 13:30:33 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:30:33 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:30:33 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:30:33 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:30:33 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 49
+[14-Nov-2023 13:30:33 Europe/Berlin] foobar
+[14-Nov-2023 13:31:37 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:31:37 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 34
+[14-Nov-2023 13:31:37 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 34
+[14-Nov-2023 13:31:37 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 34
+[14-Nov-2023 13:31:37 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 34
+[14-Nov-2023 13:31:37 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\db\Database.class.php on line 49
+[14-Nov-2023 13:31:37 Europe/Berlin] foobar
+[14-Nov-2023 13:33:09 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:09 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:09 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:09 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:09 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:09 Europe/Berlin] foobar
+[14-Nov-2023 13:33:16 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:16 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:16 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:16 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:16 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:16 Europe/Berlin] foobar
+[14-Nov-2023 13:33:17 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:17 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:17 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:17 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:17 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:33:17 Europe/Berlin] foobar
+[14-Nov-2023 13:35:21 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:21 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:21 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:21 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:21 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:21 Europe/Berlin] foobar
+[14-Nov-2023 13:35:32 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:32 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:32 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:32 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:32 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:35:32 Europe/Berlin] foobar
+[14-Nov-2023 13:37:55 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:37:55 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:37:55 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:37:55 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:37:55 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:37:55 Europe/Berlin] foobar
+[14-Nov-2023 13:40:32 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function PaymentModel::updateDetailPayment(), 4 passed in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 34 and exactly 5 expected in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\PaymentModel.class.php:17
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php(34): PaymentModel->updateDetailPayment(1, 2, 3, 4)
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): PaymentController::updateDetailPayment(Array)
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(81): APIRouter->run()
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#5 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\PaymentModel.class.php on line 17
+[14-Nov-2023 13:40:47 Europe/Berlin] foobar
+[14-Nov-2023 13:41:10 Europe/Berlin] foobar
+[14-Nov-2023 13:50:23 Europe/Berlin] PHP Warning:  Undefined array key "id_user" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:50:23 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:50:23 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:50:23 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:50:23 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 33
+[14-Nov-2023 13:50:23 Europe/Berlin] foobar
+[14-Nov-2023 13:50:56 Europe/Berlin] foobar
+[14-Nov-2023 13:51:48 Europe/Berlin] foobar
+[14-Nov-2023 13:57:52 Europe/Berlin] foobar
+[14-Nov-2023 13:58:06 Europe/Berlin] foobar
+[14-Nov-2023 13:58:12 Europe/Berlin] foobar
+[14-Nov-2023 13:58:23 Europe/Berlin] foobar
+[14-Nov-2023 13:58:31 Europe/Berlin] foobar
+[14-Nov-2023 14:00:04 Europe/Berlin] foobar
+[14-Nov-2023 14:00:13 Europe/Berlin] foobar
+[14-Nov-2023 14:00:42 Europe/Berlin] foobar
+[14-Nov-2023 14:01:37 Europe/Berlin] foobar
+[14-Nov-2023 14:01:43 Europe/Berlin] foobar
+[14-Nov-2023 14:01:49 Europe/Berlin] foobar
+[14-Nov-2023 14:01:56 Europe/Berlin] foobar
+[14-Nov-2023 14:02:02 Europe/Berlin] foobar
+[14-Nov-2023 14:02:08 Europe/Berlin] foobar
+[14-Nov-2023 14:03:02 Europe/Berlin] foobar
+[14-Nov-2023 14:03:04 Europe/Berlin] foobar
+[14-Nov-2023 14:03:14 Europe/Berlin] foobar
+[14-Nov-2023 14:03:19 Europe/Berlin] foobar
+[14-Nov-2023 14:03:24 Europe/Berlin] foobar
+[14-Nov-2023 14:07:48 Europe/Berlin] foobar
+[14-Nov-2023 14:08:45 Europe/Berlin] foobar
+[14-Nov-2023 14:54:40 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 33
+[14-Nov-2023 14:54:40 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 37
+[14-Nov-2023 14:54:54 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 33
+[14-Nov-2023 14:54:54 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 37
+[14-Nov-2023 14:54:57 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 33
+[14-Nov-2023 14:54:57 Europe/Berlin] PHP Warning:  Attempt to read property "status" on bool in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 37
+[14-Nov-2023 15:04:15 Europe/Berlin] PHP Parse error:  syntax error, unexpected token "}", expecting ";" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\views\partials\music.php on line 37
+[14-Nov-2023 16:17:21 Europe/Berlin] PHP Warning:  Undefined array key "card_number" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 24
+[14-Nov-2023 16:17:21 Europe/Berlin] PHP Warning:  Undefined array key "card_owner" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 24
+[14-Nov-2023 16:17:21 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_month" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 24
+[14-Nov-2023 16:17:21 Europe/Berlin] PHP Warning:  Undefined array key "card_exp_year" in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\PaymentController.class.php on line 24
+[14-Nov-2023 16:17:21 Europe/Berlin] foobar
+[15-Nov-2023 14:00:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "BinotifyRestClient" not found in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php:21
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\LikesController.class.php(16): LikesModel->likes('92', '19')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): LikesController::likes(Array)
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(79): APIRouter->run()
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#5 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php on line 21
+[15-Nov-2023 14:00:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "BinotifyRestClient" not found in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php:21
+Stack trace:
+#0 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\controllers\LikesController.class.php(16): LikesModel->likes('9', '19')
+#1 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\APIRouter.class.php(79): LikesController::likes(Array)
+#2 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\api\index.php(79): APIRouter->run()
+#3 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\router\PageRouter.class.php(69): require_once('D:\\Kuliah\\Semes...')
+#4 D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\public\index.php(6): PageRouter->getPage()
+#5 {main}
+  thrown in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php on line 21
+[15-Nov-2023 14:01:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_music in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php on line 24
+[15-Nov-2023 14:01:22 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_album in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php on line 24
+[15-Nov-2023 14:01:41 Europe/Berlin] PHP Warning:  Undefined property: stdClass::$id_album in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\models\LikesModel.class.php on line 24
+[15-Nov-2023 14:11:39 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\utils\HttpCaller.class.php on line 26
+[15-Nov-2023 14:12:26 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\utils\HttpCaller.class.php on line 25
+[15-Nov-2023 14:13:43 Europe/Berlin] PHP Warning:  Array to string conversion in D:\Kuliah\Semester 5\WBD\Milestone2\Stopify-PHP-App\src\utils\HttpCaller.class.php on line 27

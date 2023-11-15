@@ -12,12 +12,19 @@ document.addEventListener("click", function(event) {
     deleteArtistForm();
   }
 
+  if (event.target.matches("#dialog-subscribe-submit-button")) {
+    submitSubscribeForm();
+  }
+
   if (event.target.matches(".edit-artist")) {
     openEditArtistDialog(event);
   }
 
   if (event.target.matches(".add-artist")) {
     openAddArtistDialog();
+  }
+  if(event.target.matches(".premium-artist")){
+    openSubscribeDialog(event);
   }
 });
 
@@ -104,6 +111,33 @@ function submitArtistForm() {
   } 
 }
 
+function submitSubscribeForm(){
+  let email = document.getElementById("subscribe-email").value;
+  let artistId = document.getElementById("dialog-artist").getAttribute('id-artist');
+  if (!validateInputs([email, artistId])) {
+    alert("Field cannot be empty!");
+    return;
+  }
+  let formData = new FormData();  
+  formData.append("email", email);
+  formData.append("artist_id", artistId);
+
+  let xhr = new XMLHttpRequest();
+  let method = "POST";
+  let url = `/api/subscribe`
+  xhr.open(method, url, true);
+  xhr.onreadystatechange = function () {
+    alert(JSON.parse(xhr.responseText).message);
+  };
+
+  let conf_msg = `Are you sure you want to proceed subscribe?`;
+  if (confirm(conf_msg)) {
+    xhr.send(formData);
+    document.getElementsByClassName("dialog-wrapper")[0].remove();
+  } 
+
+}
+
 function deleteArtistForm() {
   let xhr = new XMLHttpRequest();
   let method = "DELETE";
@@ -121,7 +155,20 @@ function deleteArtistForm() {
     document.getElementsByClassName("dialog-wrapper")[0].remove();
   } 
 }
+function openSubscribeDialog(event){
+  const xhr = new XMLHttpRequest();
+  const method = "GET";
+  const id = event.target.parentElement.getAttribute("value");
+  const url = "/element/subscribe/"+id;
+  xhr.open(method, url);
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        document.querySelector(".dialog-section").innerHTML = xhr.responseText;
+      }
+    };
+  xhr.send();
 
+}
 function closeDialog() {
   const dialog = document.getElementsByClassName("dialog-wrapper")[0];
   if (dialog) {
