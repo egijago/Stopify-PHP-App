@@ -21,6 +21,12 @@ class ArtistModel extends BaseModel
 		return $this->db->resultSet();
     }
 
+    public function getArtistByEmail($email)
+    {   
+        $this->db->query('SELECT * FROM ' . $this->table . 'WHERE email = '. $email);
+        return $this->db->single();
+    }
+
 	public function getArtistRecords($current_page,$limit)
     {
         $offset = ($current_page - 1) * $limit;

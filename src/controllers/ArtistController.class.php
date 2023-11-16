@@ -23,6 +23,14 @@ class ArtistController extends BaseController
         $result =  self::getInstance()->model->getArtistByArtistID($params["id_artist"]);
         self::toResponse(200, "", $result);
     }
+
+    public static function getArtistByEmail($path_params)
+    {
+        $params = $path_params;
+
+        $result = self::getInstance()->model->getArtistByEmail($params["email"]);
+        self::toResponse(200, "", $result);
+    }
     
     public static function editArtist($path_params)
     {

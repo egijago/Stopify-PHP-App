@@ -27,6 +27,7 @@ $router->delete('/api/albums/{id_album}', AlbumController::class . '::deleteAlbu
 /* Artist API */
 $router->get('/api/artists', ArtistController::class .'::getAllArtist');
 $router->get('/api/artists/{id_artist}' ,ArtistController::class . '::getArtistbyArtistId');
+$router->get('/api/artists/{email}' ,ArtistController::class . '::getArtistByEmail');
 $router->post('/api/artists/{id_artist}', ArtistController::class . '::editArtist');
 $router->post('/api/artists', ArtistController::class . '::insertArtist');
 $router->delete('/api/artists/{id_artist}', ArtistController::class . '::deleteArtist');

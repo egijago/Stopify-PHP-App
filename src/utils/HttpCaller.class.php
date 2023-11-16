@@ -2,6 +2,8 @@
 
 class HttpCaller {
   public static function get($url, $data = null) {
+    echo("". $url ."". json_encode($data) .""); //DEBUG
+
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, self::buildGetUrl($url, $data));
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -19,6 +21,8 @@ class HttpCaller {
   }
 
   public static function post($url, $data = null) {
+    echo("". $url ."". json_encode($data) .""); //DEBUG
+
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_POST, 1);
     if ($data) {

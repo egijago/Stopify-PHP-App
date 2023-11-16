@@ -15,14 +15,8 @@ class LikesModel extends BaseModel
         $this->db->query('INSERT INTO ' . $this->table . ' (id_user, id_music) VALUES (:id_user, :id_music)');
         $this->db->bind('id_user', $id_user);
         $this->db->bind('id_music', $id_music);
-
-        $music = new MusicModel();
-        $detail = $music->getDetailMusic($id_music);
-
-        $httpCaller = new BinotifyRestClient();
-
-        $response=$httpCaller->likeSongPremium($id_user,$detail->id_artist,$id_music,$detail->id_album);
-        return $response;
+        
+        return $this->db->rowCount();
     }
 
     public function checkLikes($id_user, $id_music)
