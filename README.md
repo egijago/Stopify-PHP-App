@@ -24,67 +24,67 @@ Pindahkan isi dari repository ini ke htdocs pada XAMPP. Konfigurasi database dap
 
 ### Login Page
 
-![](ss/login.png)
+![](screenshots/login.png)
 
 ### Register Page
 
-![](ss/register.png)
+![](screenshots/register.png)
 
 ### Home Page
 
-![](ss/home.png)
+![](screenshots/home.png)
 
 ### Search, Sort, Filter Page
 
-![](ss/search.png)
+![](screenshots/search.png)
 
 ### Daftar Album Page
 
-![](ss/albums.png)
+![](screenshots/albums.png)
 
 ### Detail Album Page
 
-![](ss/album.png)
+![](screenshots/album.png)
 
 ### Detail Lagu Page
 
-![](ss/music.png)
+![](screenshots/music.png)
 
 ### Daftar Artist
 
-![](ss/artist.png)
+![](screenshots/artist.png)
 
 ### Daftar Genre
 
-![](ss/genres.png)
+![](screenshots/genres.png)
 
 ### Daftar Liked Song
 
-![](ss/liked.png)
+![](screenshots/liked.png)
 
 ### Edit Album
 
-![](ss/editalbum.png)
+![](screenshots/editalbum.png)
 
 ### Edit Lagu
 
-![](ss/editsong.png)
+![](screenshots/editsong.png)
 
 ### Edit Genre
 
-![](ss/genreedit.png)
+![](screenshots/genreedit.png)
 
 ### Tambah Album
 
-![](ss/addalbum.png)
+![](screenshots/addalbum.png)
 
 ### Tambah Lagu
 
-![](ss/addsong.png)
+![](screenshots/addsong.png)
 
 ### Tambah Genre
 
-![](ss/genreinput.png)
+![](screenshots/genreinput.png)
 
 # Pembagian tugas
 
